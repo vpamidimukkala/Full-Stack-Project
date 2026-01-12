@@ -4,5 +4,6 @@ from .models import *
 
 admin.site.register(Country)
 admin.site.register(League)
+admin.site.register(ClubType)
 admin.site.register(Characteristic)
 admin.site.register(FootballClub)

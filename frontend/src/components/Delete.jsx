@@ -16,11 +16,15 @@ const Delete = () =>{
 
     const [myData, setMyData] = useState({
         name : "",
+        owner_name : "",
         description : "",
         country : "",
         league : "",
+        clubtype : "",
+        founded_year : "",
         attendance : 0,
         city : "",
+        home_stadium : "",
         characteristic :[]
     })
 
@@ -70,7 +74,8 @@ const Delete = () =>{
             </Box>
 
             <Box sx={{marginTop: '30px'}}>
-                <Button type='submit' variant='contained' fullWidth>Delete</Button>
+                <Button type='submit' variant='contained'>Delete</Button>
+                <Button type='submit' sx={{marginLeft:'15px', fontWeight:'bold'}} variant='outlined' href='/' >Back to Home</Button>
             </Box>
 
             </form>

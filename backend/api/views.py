@@ -28,6 +28,17 @@ class LeagueViewset(viewsets.ViewSet):
         serializer = self.serializer_class(queryset, many=True)
         return Response(serializer.data)
 
+class ClubTypeViewset(viewsets.ViewSet):
+    permission_classes = [permissions.AllowAny]
+    queryset = ClubType.objects.all()
+    serializer_class = ClubTypeSerializer
+
+
+    def list(self, request):
+        queryset = ClubType.objects.all()
+        serializer = self.serializer_class(queryset, many=True)
+        return Response(serializer.data)
+
 class CharacteristicViewset(viewsets.ViewSet):
     permission_classes = [permissions.AllowAny]
     queryset = Characteristic.objects.all()

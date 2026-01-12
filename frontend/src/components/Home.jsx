@@ -36,6 +36,10 @@ const Home = () =>{
                 header:'League'
             },
             {
+                accessorKey:'clubtype_details.name',
+                header:'ClubType'
+            },
+            {
                 accessorKey:'city',
                 header:'City'
             },

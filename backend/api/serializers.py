@@ -11,6 +11,11 @@ class LeagueSerializer(serializers.ModelSerializer):
         model = League
         fields = ('id', 'name')
 
+class ClubTypeSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ClubType
+        fields = ('id', 'name')
+
 class CharacteristicSerializer(serializers.ModelSerializer):
     class Meta:
         model = Characteristic
@@ -18,6 +23,7 @@ class CharacteristicSerializer(serializers.ModelSerializer):
 
 class FootballClubSerializer(serializers.ModelSerializer):
     league_details = LeagueSerializer(source='league', read_only=True)
+    clubtype_details = ClubTypeSerializer(source='clubtype', read_only=True)
     country_details = CountrySerializer(source='country', read_only=True)
     characteristics_names = serializers.SerializerMethodField()
     class Meta:
